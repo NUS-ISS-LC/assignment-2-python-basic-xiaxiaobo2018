@@ -13,19 +13,12 @@ def find(s, n):
 
         # Check if this complement is already in our dictionary
         if complement in seen_numbers:
-            # If it is, we found our pair!
-            # The current index is 'i', and the complement's index
-            # is stored in our dictionary.
             return [seen_numbers[complement], i]
         
-        # If the complement was NOT found, it means we haven't
-        # found our pair yet.
-        # We add the *current* number and its index to the dictionary
-        # to be checked against in future loops.
+        # If the complement was NOT found
         seen_numbers[num] = i
 
     # If we get through the whole loop without finding a pair,
-    # return None as per your template.
     return None
 
 # --- Example Usage ---
